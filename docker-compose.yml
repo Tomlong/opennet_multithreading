@@ -1,0 +1,11 @@
+version: '3.8'
+
+services:
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: opennet-multithread-app
+    environment:
+      - PRODUCER_INTERVAL_TIME=0.1
+      - CONSUMER_INTERVAL_TIME=0.15
