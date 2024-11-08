@@ -9,3 +9,4 @@ services:
     environment:
       - PRODUCER_INTERVAL_TIME=0.1
       - CONSUMER_INTERVAL_TIME=0.15
+      - MAX_QUEUE_SIZE=10
