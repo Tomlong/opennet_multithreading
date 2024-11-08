@@ -24,4 +24,4 @@ RUN ls /app/.venv/lib/python3.11/site-packages
 COPY ["./", "./"]
 
 # Run the main application file using Poetry's virtual environment
-CMD ["poetry", "run", "python", "main.py"]
+CMD ["python", "main.py"]
