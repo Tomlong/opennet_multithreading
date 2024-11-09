@@ -2,7 +2,12 @@
 
 This is the assignment 1 which is about multithreading application for the OpenNet
 
-### Run local
+## Structure
+- `main.py`: the main application, which contains the producer and consumer threads.
+    - `producer`: the producer thread which produce the message to the queue in `PRODUCER_INTERVAL_TIME` and would not append the message to the queue if the queue is full.
+    - `consumer`: the consumer thread which consume the message from the queue in `CONSUMER_INTERVAL_TIME`
+
+## Run local
 1. Prepare the `.env` based on `.env.sample`
     ```bash
     PRODUCER_INTERVAL_TIME=0.1
