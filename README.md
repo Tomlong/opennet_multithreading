@@ -34,7 +34,7 @@ This is the assignment 1 which is about multithreading application for the OpenN
     ```
 3. run
     ```bash
-    docker-compose run
+    docker-compose up -d
     ```
 
 
