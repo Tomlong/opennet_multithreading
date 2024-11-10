@@ -13,15 +13,9 @@ WORKDIR /app
 # Install Poetry
 RUN pip install poetry
 
-# Copy dependency files and install dependencies
-COPY ["./pyproject.toml", "poetry.lock", "./"]
-RUN poetry install
-
-# Check installed packages for debugging
-RUN ls /app/.venv/lib/python3.11/site-packages
-
-# Copy application code
+# Copy all
 COPY ["./", "./"]
+RUN poetry install
 
 # Run the main application file using Poetry's virtual environment
 CMD ["python", "main.py"]
